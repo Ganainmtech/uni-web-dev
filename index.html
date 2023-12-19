@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <!-- Author: Sara Jane Kenny -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Anime Character Random</title>
+    <title>Anime Character Game</title>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Random Anime Game</h1>
-		<div class="left-column">
-		<img id="hoverImage" src="anime.jpg" alt="Anime Image"> 
-		<!-- Image Ref: https://www.pinterest.com/pin/japanese-anime-logo-manga-otaku-by-thelariat--889883207592385067/ -->
-    </div>
-        
-        <!-- Navigation Section -->
-<nav>
-        <div class="navigation">
-            <button id="narutoLink">Watch Naruto Now</button>
-            <button id="narutopediaLink">Narutopedia</button>
+    <header>
+        <h1>Random Anime Character Game: Naruto Version!</h1>
+    </header>
+
+    <main class="container">
+        <div class="columns">
+            <!-- Navigation Column -->
+            <nav class="column">
+                <button id="menuButton">Menu</button>
+                <div class="menuLinks" id="menuLinks">
+                    <a href="#" class="menuLink" id="narutoLink">Watch Naruto Now</a>
+                    <a href="#" class="menuLink" id="narutopediaLink">Narutopedia</a>
+                </div>
+                
+                <!-- Input range bar for web score rating -->
+                <h2> Rate our website! </h2>
+                <input type="range" id="ratingInput" min="1" max="5" step="1" value="3">
+                <p id="webScore"></p>
+				
+				<div class="user-input-section">
+                    <label for="favoriteCharacter">Enter Your Favorite Character:</label>
+                    <input type="text" id="favoriteCharacter" placeholder="e.g., Naruto Uzumaki">
+                    <button id="displayFavoriteCharacter">Display Favorite Character</button>
+                    <p id="displayedText"></p>
+                </div>
+            </nav>
+
+            <!-- Main Content Column -->
+            <div class="column">
+                <img id="animeImage" src="Images/anime.jpg" alt="Anime Image">
+                <!-- Image Ref: https://pixels.com/featured/anime-manga-word-text-tony-rubino.html-->
+                <div id="gameResult">
+                    <h2>Selected Anime Character:</h2>
+                    <img id="characterImage" alt="Character Image">
+                    <p id="characterBio"></p>
+                </div>
+
+                <button id="playButton">Play Game!</button>
+            </div>
         </div>
-        
-</nav>
-		
-        <button id="playButton">Play Game!</button>
-        
-        <div id="result">
-            <h2>Selected Anime Character:</h2>
-            <img id="characterImage" alt="Character Image">
-            <p id="characterBio"></p>
-        </div>
-    </div>
+    </main>
+
+    <footer id="footer">
+        <p>&copy; 2023 Sara Jane - info@notrealgmail.com</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
