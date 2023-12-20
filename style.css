@@ -17,6 +17,13 @@ header h1 {
 	text-decoration: none;
 }
 
+h2, h3 {
+	font-family: 'Arial', sans-serif;
+	color: #0c2fdf;
+	text-align: center;
+	text-decoration: none;
+}
+
 .columns {
     display: flex;
 }
@@ -72,6 +79,10 @@ button:hover {
     max-width: 100%;
     max-height: 200px;
     margin-top: 10px;
+}
+
+.character-name, .character-bio {
+    color: #0b0b0b;
 }
 
 #animeImage:hover {
