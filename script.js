@@ -115,9 +115,10 @@ document.addEventListener('DOMContentLoaded', function () {
     playButton.addEventListener('click', function () {
         const randomIndex = Math.floor(Math.random() * narutoCharacters.length);
         const selectedCharacter = narutoCharacters[randomIndex];
-
-        characterImage.src = selectedCharacter.image;
-        characterBio.textContent = `${selectedCharacter.name}: ${selectedCharacter.bio}`;
+		
+		characterName = selectedCharacter.name; // Store the character name
+        setCharacterImage(selectedCharacter.image);
+        characterBio.innerHTML = `<span class="character-name">${selectedCharacter.name}: </span><span class="character-bio">${selectedCharacter.bio}</span>`;
     });
 
     // Navigation Links
